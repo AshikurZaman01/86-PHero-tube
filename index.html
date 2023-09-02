@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHERO-TUBE</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header>
+        <!-- navbar -->
+        <nav class="p-4 mx-2 md:mx-10 my-4">
+            <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+              <div class="text-xl font-semibold mb-4 md:mb-0">
+                <img src="./Resources/Logo.png" alt="">
+              </div>
+              <div class="flex justify-center items-center space-x-2 md:space-x-4 lg:space-x-8 mt-4 md:mt-0">
+                <button id="sort-by-view"  class="text-sm md:text-base font-normal text-black px-2 md:px-4 py-1 md:py-2 bg-gray-300 rounded">Sort by view</button>
+              </div>
+              <div class="flex justify-center items-center space-x-2 md:space-x-4 lg:space-x-8 mt-4 md:mt-0">
+                <button class="text-sm md:text-base font-normal text-white px-2 md:px-4 py-1 md:py-2 bg-[#FF1F3D] rounded">Blog</button>
+              </div>
+            </div>
+          </nav>         
+        <!-- navbar end -->
+    </header>
+
+        <!-- Button section -->
+        <section class="flex justify-center ">
+            <div id="categories-buttons" class="space-y-4 text-center gap-4">
+             
+            </div>
+          </section>
+        <!-- Button section end -->
+
+     
+        <!-- load data display -->
+        <div class="container mx-auto p-4 my-4">
+            <div id="card-container" class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
+
+            </div>
+        </div>
+        <!-- load data display -->
+
+        <!-- error message display -->
+        <div id="error-message" class=" flex h-60 items-center justify-center hidden">           
+        </div>
+        <!-- error message display -->
+
+        
+
+
+<script src="scrips/load Categories.js"></script>
+<script src="scrips/Handle Load Data.js"></script>
+<script src="scrips/time convert.js"></script>
+</body>
+</html>
