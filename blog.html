@@ -14,7 +14,158 @@
   <section>
     <div class="container mx-auto bg-zinc-100 my-[50px] p-4">
 
-      <h2 class="text-center text-3xl font-bold">Var, Let and Const</h2>
+      <div class="var-let-const text-center">
+        <h2 class="text-3xl font-bold py-[20px]">Var, Let, and Const</h2>
+        <img class="mx-auto block w-3/5 h-60 opacity-80" src="./Resources/Design in png/varletandconst.png" alt="">
+
+      <div class="var">
+        <h3 class=" mt-8 font-bold text-2xl">var </h3>
+        <p class="my-[20px] text-justify">In JavaScript when you declare a variable using the keyword <strong>"var"</strong> its scope is limited to the function in which it is defined. If you declare a var variable outside of any function it becomes a variable. Can be accessed throughout the entire script.
+
+          Another aspect to consider is hoisting. With var variables they are moved to the top of their containing function or global scope during the code execution. This means that you can use and access var variables before they are actually declared in your code.
+        <br> <br>
+        <strong> For example:</strong>
+<br>
+         
+            function example() { <br>
+            if ({ <br>
+              var x = 10; <br>
+            } <br>
+            console.log(x);  <br>
+            } <br>
+            
+        </p>
+      </div>
+
+      <div class="let">
+          <h3 class=" mt-8 font-bold text-2xl">let </h3>
+          <p class="my-[20px] text-justify"> <strong>Block Scope:</strong> Variables declared using the keyword <strong>"let"</strong> have block scope. This means that they can only be accessed within the block of code (enclosed in braces) where they are defined. This feature is especially handy when working with loops and conditional statements.
+            No Hoisting; Unlike variables declared with  <strong>"var"</strong> let variables are not hoisted to the top of their containing block. As a result you cannot access them before they are declared.
+           <br><br>
+           <strong>For example:</strong>  
+  <br>
+           
+  if (true) { <br>
+    let y = 20; <br>
+   } <br>
+   console.log(y)
+              
+          </p>
+      </div>
+      
+      <div class="conts">
+        <h3 class=" mt-8 font-bold text-2xl">conts </h3>
+        <p class="my-[20px] text-justify"> <strong>Block Scope:</strong>Similar, to the <strong>'let'</strong> keyword, <strong>'const'</strong> variables are also limited, to the block where they are defined. They cannot be accessed outside of that block.
+
+        <strong>Constants </strong> The <strong>'const'</strong>  keyword is used to declare constants, which means their values cannot be changed once they have been initialized. However even though the content of objects and arrays declared with 'const' can be modified the variable itself cannot be reassigned.
+         <br><br>
+         <strong>For example:</strong>  
+<br>
+         
+const PI = 3.14; <br>
+PI = 3.14159; <br>
+<br>
+const myArray = [1, 2 3]; <br>
+myArray.push(4); <br>
+myArray = [4, 5 6]; <br>
+            
+        </p>
+
+        <p class="text-justify">In summary, the scope of <strong>'var'</strong> is function scoped or global if declared outside functions <strong>'let'</strong>  and <strong>'const'</strong>  are block scoped and const additionally enforces immutability for the variable binding itself it is generally recommended to use let or const over var to avoid unexpected scoping issues and to choose between let and const based on whether the variable s value should remain constant or can be changed</p>
+    </div>
+
+      </div>
+    
+    <div class="null-conts text-center mt-[30px]">
+      <h2 class="text-3xl font-bold py-[20px]">Null and Undefined</h2>
+      <img class="mx-auto block w-3/5 h-60 opacity-80" src="./Resources/Design in png/nullOrUndef.jpg" alt="">
+
+    <div class="null">
+      <h3 class=" mt-8 font-bold text-2xl">Null </h3>
+      <p class="my-[20px] text-justify">A null value is a purposeful value that reflects the absence of any object value or the absence of a value itself.
+        It is frequently used to indicate that a variable has no value on purpose or that an object attribute has no set value on purpose.
+        It can be assigned to variables or properties to clear their existing values or to start them from scratch.
+        It can also be used as a sentinel value to determine whether a variable is empty or uninitialized.
+        
+       <br><br>
+       <strong>For example:</strong>  
+<br>
+       
+let myVar = null; <br>
+let element = document.getElementById('nonExistentElement'); <br>
+if (element === null) { <br>
+  // Handle the case where the element doesn't exist br
+}
+
+          
+      </p>
+  </div>
+
+    <div class="undefined">
+      <h3 class=" mt-8 font-bold text-2xl">const </h3>
+      <p class="my-[20px] text-justify">The variable undefined has been declared but has not been assigned a value. It also serves as the default value for function parameters that are not supplied when the function is called.
+        It can signify a missing value because a variable was not initialized, a property was not specified, or a function did not return a value.
+        Because undefined can cause unexpected behavior, it's usually a good idea to initialize variables with meaningful values or explicitly set them to null if no value is desired.      
+        
+      <br><br>
+      <strong>For example:</strong>  
+  <br>
+      
+  let x; <br>
+  function example(a, b) { <br>
+    console.log(a); <br>
+    console.log(b); <br>
+
+          
+      </p>
+
+      <p class="text-justify">In practice,<strong>'null'</strong> is frequently used to represent the absence of a previously present value or to purposefully set a value to <strong>"nothing."</strong></strong> <strong>undefined</strong> is typically used when you declare a variable but do not assign a value to it or when a function argument is missing.
+      </p>
+  </div>
+
+    </div>
+
+    <div class="resr-api text-center mt-[30px]">
+      <h2 class="text-3xl font-bold py-[20px]">Rest API</h2>
+      <img class="mx-auto block w-3/5 h-60 opacity-80" src="./Resources/Design in png/rest_api.svg" alt="">
+
+    <div class="rest-api">
+      <h3 class=" mt-8 font-bold text-2xl">Rest API </h3>
+      <p class="my-[20px] text-justify">The Representational State Transfer Application Programming Interface (REST API) is a collection of architectural principles and limitations for creating and interacting with web services. It is a method of developing networked apps that use the HTTP protocol. REST is not a technology in and of itself, but rather a design approach for networked applications with specified properties. REST's fundamental principles and notions are as follows:
+
+      <br><br>
+      One of the essential concepts of REST is that each request from a client to a server must include all of the information required to comprehend and perform the request. In other words, the server should not keep track of the client's status between queries. Each request should stand on its own. 
+      <br><br>
+      Resources: The key abstractions in REST are resources, which are commonly identified by URLs (Uniform Resource Locators). Resources can represent any entity, such as data objects, services, or real-world entities, and are modified using conventional HTTP protocols.
+      <br><br>
+      HTTP Methods: RESTful APIs employ HTTP methods (verbs) to accomplish resource actions. The following are the most frequent HTTP methods used in REST: <br> <br>
+
+      GET: Get information from the server. <br>
+      POST: Create a new server resource. <br>
+      PUT: Update an existing resource or create one if one does not already exist. <br>
+      DELETE: This command removes a resource from the server. <br> <br>
+
+      REST APIs have a consistent and uniform interface, which means that the same set of HTTP methods and protocols are utilized across the API. This consistency simplifies both the API's architecture and interaction with it. <br><br>
+      RESTful communication between client and server is stateless, which means that each request from the client to the server must include all necessary information. Client state is not saved by the server between queries.
+
+      REST resources are provided in a format that both the client and server can understand. JSON and XML are common representation forms, however other formats can be utilized as well. <br><br>
+
+      Layered System: REST allows for a layered architecture, where various components (e.g., proxies, load balancers, caches) can be added to improve system scalability and security without affecting the overall architecture. <br><br>
+
+      REST APIs are widely used for building web services because of their simplicity and compatibility with HTTP, which is the backbone of the World Wide Web. They are commonly used for exposing data and services over the internet and are the basis for many web applications and mobile app backends. RESTful APIs have become a standard for building web services due to their ease of use, scalability, and wide support in programming languages and frameworks.
+
+
+      
+
+
+          
+      </p>
+  </div>
+
+   
+
+    </div>
+
     </div>
   </section>
  
